@@ -1,25 +1,20 @@
+<!-- 
+- [ ]  Creare una variabile con un paragrafo di testo a vostra scelta.
+- [ ]  Una parola da censurare viene passata dall'utente tramite parametro GET.
+- [ ]  Stampare di nuovo il paragrafo e la sua lunghezza, dopo aver sostituito con tre asterischi 
+       (***) tutte le occorrenze della parola da censurare.
+-->
+
 <?php
-// Codice PHP
-  
+
+
+$email = $_POST ['parola da censurare'];
+
 ?>
 
 
 
-<form action="./script.php" method="GET">
-    <div>
-        <label for="autostrada">inserisci nome Autostrada</label>  
-    </div>
-    <div>
-        <input type="text" name="autostrada" id="autostrada">
-    </div>
-    <div>
-        <label for="autostrada">inserisci Km Autostrada</label>  
-    </div>
-    <div>
-        <input type="number" name="autostrada" id="autostrada">
-    </div>
- 
-    <button type="submit">Invia</button>
 
-
-</form> 
+<h3>
+    email: <?php  echo $email ?>
+</h3>
