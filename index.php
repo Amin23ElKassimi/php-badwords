@@ -14,7 +14,12 @@
     <title>PHP BadWords</title>
 </head>
 <body>
+    <form action="./index.php" method="GEt">
+        <label for="badword">Badword to be censored:</label>
+        <input type="text" name="badword" id="badword">
 
+        <button type="submit">censore!</button>
+    </form>
     <h1>
         PHP Badwords
     </h1>
