@@ -1,7 +1,8 @@
 <?php
 // Codice PHP
-    $variabile = "Giuseppe";
-
+    $paragraph = "Topic sentences, also known as “paragraph leaders,” introduce the main idea that the paragraph is about. They shouldn’t reveal too much on their own, but rather prepare the reader for the rest of the paragraph by stating clearly what topic will be discussed. ";
+    $badword = $_GET['badword'];
+    $censoredParagraph = str_ireplace($badword, "***", $paragraph);
 ?>
 
 
@@ -10,27 +11,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>PHP BadWords</title>
 </head>
 <body>
 
-<form action="./script.php" method="POST">
+    <h1>
+        PHP Badwords
+    </h1>
+    <h2>
+        Paragraph: <br>
+        Length: <?php echo strlen($paragraph); ?>
+    </h2>
+    <p>
+        <?php echo $paragraph; ?>
+    </p>
+    <hr>
+    <h2>
+        Censored Paragraph: <br>
+        Length: <?php echo strlen($censoredParagraph); ?>
+    </h2>
+    <p>
+        <?php echo $censoredParagraph; ?>
+    </p>
 
-    <div name="paragrafo">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet quasi exercitationem, consequuntur necessitatibus fuga possimus ex veritatis nesciunt iure itaque ullam, explicabo eveniet repellendus nostrum ea veniam nulla dolor laudantium.
-    </div>
 
-    <div>
-        <label for="pass">inserisci parola da censurare</label>  
-    </div>
-    <div>
-        <input type="text" name="parola" id="parola">
-    </div>
- 
-    <button type="submit">Invia</button>
-</form> 
-
-
-    
 </body>
-</html>
+            
